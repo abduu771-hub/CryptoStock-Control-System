@@ -1,0 +1,87 @@
+[
+    {
+        "request_id": "1749750557",
+        "material": "Capacitors",
+        "price": 0.21
+    },
+    {
+        "request_id": "1749761230",
+        "material": "Microcontrollers",
+        "price": 0.04
+    },
+    {
+        "request_id": "1749811661",
+        "material": "Microcontrollers",
+        "price": 0.01
+    },
+    {
+        "request_id": "1749812302",
+        "material": "Ethernet Ports",
+        "price": 0.12
+    },
+    {
+        "request_id": "1749817572",
+        "material": "Microcontrollers",
+        "price": 0.09
+    },
+    {
+        "request_id": "1749926198",
+        "material": "Cooling Fans",
+        "price": 0.002
+    },
+    {
+        "request_id": "1749927451",
+        "material": "Ethernet Ports",
+        "price": 0.1
+    },
+    {
+        "request_id": "1749928121",
+        "material": "Capacitors",
+        "price": 0.2
+    },
+    {
+        "request_id": "1749928470",
+        "material": "Microcontrollers",
+        "price": 0.01
+    },
+    {
+        "request_id": "1750001052",
+        "material": "PCB Boards",
+        "price": 0.66
+    },
+    {
+        "request_id": "1750001052",
+        "material": "PCB Boards",
+        "price": 0.66
+    },
+    {
+        "request_id": "1750001052",
+        "material": "PCB Boards",
+        "price": 0.02
+    },
+    {
+        "request_id": "1750001932",
+        "material": "Capacitors",
+        "price": 0.1
+    },
+    {
+        "request_id": "1750064531",
+        "material": "LED Indicators",
+        "price": 0.2
+    },
+    {
+        "request_id": "1750516559",
+        "material": "Capacitors",
+        "price": 0.2
+    },
+    {
+        "request_id": "1760515907",
+        "material": "Cooling Fans",
+        "price": 0.2
+    },
+    {
+        "request_id": "1760521678",
+        "material": "Microcontrollers",
+        "price": 0.02
+    }
+]

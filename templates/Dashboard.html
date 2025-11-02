@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Inventory Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2962FF;
+            --primary-light: #448AFF;
+            --primary-dark: #0039CB;
+            --secondary: #00B0FF;
+            --danger: #FF3D00;
+            --warning: #FFAB00;
+            --success: #00C853;
+            --dark: #0A192F;
+            --darker: #020C1B;
+            --light: #E2F3FF;
+            --gray: #607D8B;
+            --blockchain-blue: #1A4B8C;
+            --blockchain-glow: rgba(41, 98, 255, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        h1 {
+            color: var(--light);
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--blockchain-glow);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '🔗';
+            position: absolute;
+            right: -30px;
+            top: -5px;
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        
+        .subtitle {
+            color: var(--gray);
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        .control-panel {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background: var(--darker);
+            color: var(--light);
+            border: 1px solid var(--primary);
+            box-shadow: 0 0 10px var(--blockchain-glow);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            box-shadow: 0 0 20px var(--blockchain-glow);
+        }
+        
+        .btn-primary {
+            background: var(--primary-dark);
+            border-color: var(--primary-light);
+        }
+        
+        .btn-secondary {
+            background: var(--darker);
+            border-color: var(--secondary);
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, var(--darker), var(--dark));
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            border: 1px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
+            z-index: -1;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+            animation: animate 2s linear infinite;
+        }
+        
+        @keyframes animate {
+            0% { filter: blur(0px); }
+            100% { filter: blur(5px); }
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .material-name {
+            font-weight: 500;
+            color: var(--light);
+            font-size: 1.1rem;
+        }
+        
+        .stock-value {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 20px 0;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px currentColor;
+        }
+        
+        .low-stock {
+            color: var(--danger);
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .safe-stock {
+            color: var(--secondary);
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px currentColor;
+        }
+        
+        .status-low {
+            background-color: var(--danger);
+            animation: pulse 1.5s infinite;
+        }
+        
+        .status-safe {
+            background-color: var(--secondary);
+        }
+        
+        .card-footer {
+            margin-top: 20px;
+        }
+        
+        .alert-banner {
+            background-color: var(--warning);
+            color: var(--dark);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            animation: slideIn 0.5s forwards;
+            transform: translateX(-100%);
+            opacity: 0;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes slideIn {
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .alert-banner.error {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .alert-banner.success {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .alert-banner.info {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: transform 0.2s;
+        }
+        
+        .close-btn:hover {
+            transform: rotate(90deg);
+        }
+        
+        .logs-container {
+            background: var(--darker);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--primary);
+            margin-bottom: 40px;
+        }
+        
+        .logs-title {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        
+        .log-entry {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(66, 165, 245, 0.1);
+            font-size: 0.9rem;
+            display: flex;
+            gap: 20px;
+            transition: all 0.3s;
+        }
+        
+        .log-entry:hover {
+            background: rgba(66, 165, 245, 0.05);
+        }
+        
+        .log-time {
+            color: var(--secondary);
+            min-width: 100px;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        
+        .log-message {
+            flex: 1;
+            color: var(--light);
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Blockchain node animation */
+        .blockchain-node {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.5;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100px, 50px); }
+            50% { transform: translate(50px, 100px); }
+            75% { transform: translate(-50px, 50px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .control-panel {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Blockchain nodes background -->
+    <div class="blockchain-node" style="top: 20%; left: 10%;"></div>
+    <div class="blockchain-node" style="top: 70%; left: 80%; animation-delay: 2s;"></div>
+    <div class="blockchain-node" style="top: 40%; left: 60%; animation-delay: 4s;"></div>
+    <div class="blockchain-node" style="top: 80%; left: 20%; animation-delay: 6s;"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Blockchain Inventory Dashboard</h1>
+            <p class="subtitle">Decentralized • Secure • Real-time Tracking</p>
+        </header>
+        
+        <div id="alertBanner" class="alert-banner" style="display: none;">
+            <span id="alertMessage"></span>
+            <button class="close-btn" onclick="closeAlert()">×</button>
+        </div>
+        
+        <div class="control-panel">
+            <button class="btn btn-primary" onclick="simulateRFIDScan()">
+                <span class="btn-icon">📡</span>
+                Scan Blockchain Nodes
+            </button>
+            <button class="btn btn-secondary" onclick="sendTestEmail()">
+                <span class="btn-icon">✉️</span>
+                Test Smart Contract
+            </button>
+        </div>
+        
+        <div class="dashboard" id="stockDashboard">
+            <!-- Stock cards will be inserted here by JavaScript -->
+        </div>
+        
+        <div class="logs-container">
+            <h3 class="logs-title">
+                <span>⛓</span>
+                Blockchain Transaction Logs
+            </h3>
+            <div id="logsList">
+                <!-- Logs will be inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Global stock data
+        let stockData = {};
+        
+        // Initialize the dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchStockData();
+            fetchLogs();
+            
+            // Add blockchain connection animation
+            setTimeout(() => {
+                showAlert('Connected to blockchain network', 'info');
+            }, 1000);
+        });
+        
+        // Fetch stock data from server
+        function fetchStockData() {
+            fetch('/get_stock')
+                .then(response => response.json())
+                .then(data => {
+                    stockData = data;
+                    updateDashboard();
+                })
+                .catch(error => {
+                    showAlert('Error fetching blockchain data', 'error');
+                    addLog('Blockchain sync error: ' + error, 'error');
+                });
+        }
+        
+        // Update the dashboard with current stock data
+        function updateDashboard() {
+            const dashboard = document.getElementById('stockDashboard');
+            dashboard.innerHTML = '';
+            
+            let hasLowStock = false;
+            
+            for (const [material, quantity] of Object.entries(stockData)) {
+                const isLowStock = quantity < {{ LOW_STOCK_THRESHOLD }};
+                if (isLowStock) hasLowStock = true;
+                
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <span class="material-name">${material}</span>
+                        <span class="status-indicator ${isLowStock ? 'status-low' : 'status-safe'}"></span>
+                    </div>
+                    <div class="stock-value ${isLowStock ? 'low-stock' : 'safe-stock'}">${quantity}</div>
+                    <p>Smart Contract Threshold: {{ LOW_STOCK_THRESHOLD }} units</p>
+                    <div class="card-footer">
+                        ${isLowStock ? 
+                            `<button class="btn btn-primary" onclick="requestSupplier('${material}', ${quantity})">
+                                <span class="btn-icon">⚡</span>
+                                Execute Contract
+                            </button>` : 
+                            `<button class="btn btn-secondary" onclick="showDetails('${material}')">
+                                <span class="btn-icon">🔍</span>
+                                View Details
+                            </button>`}
+                    </div>
+                `;
+                
+                dashboard.appendChild(card);
+            }
+            
+            if (hasLowStock) {
+                showAlert('Smart Contract Alert: Inventory needs replenishment!', 'warning');
+            }
+        }
+        
+        // Show alert banner
+        function showAlert(message, type = 'warning') {
+            const banner = document.getElementById('alertBanner');
+            const alertMessage = document.getElementById('alertMessage');
+            
+            alertMessage.textContent = message;
+            banner.className = `alert-banner ${type}`;
+            banner.style.display = 'flex';
+            
+            // Trigger animation
+            setTimeout(() => {
+                banner.style.opacity = '1';
+                banner.style.transform = 'translateX(0)';
+            }, 10);
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                if (banner.style.display === 'flex') {
+                    closeAlert();
+                }
+            }, 5000);
+        }
+        
+        // Close alert banner
+        function closeAlert() {
+            const banner = document.getElementById('alertBanner');
+            banner.style.opacity = '0';
+            banner.style.transform = 'translateX(-100%)';
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 500);
+        }
+        
+        // Request supplier for material
+        function requestSupplier(material, quantity) {
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loading"></span> Executing...';
+            btn.disabled = true;
+            
+            fetch('/request_supplier', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    material: material,
+                    quantity: quantity
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(`Smart contract executed for ${material}`, 'success');
+                    addLog(`Contract executed: ${material} (${quantity} units)`, 'info');
+                } else {
+                    showAlert(`Contract failed for ${material}: ${data.error}`, 'error');
+                    addLog(`Contract failed: ${material}: ${data.error}`, 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('Blockchain network error', 'error');
+                addLog('Network error: ' + error, 'error');
+            })
+            .finally(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+        }
+        
+        // Show material details
+        function showDetails(material) {
+            showAlert(`Blockchain details for ${material}`, 'info');
+            addLog(`Viewed blockchain details for ${material}`, 'info');
+            
+            // Add a visual effect
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                if (card.querySelector('.material-name').textContent === material) {
+                    card.style.boxShadow = '0 0 20px var(--primary-light)';
+                    setTimeout(() => {
+                        card.style.boxShadow = '';
+                    }, 2000);
+                }
+            });
+        }
+        
+        // Simulate RFID scan
+        function simulateRFIDScan() {
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loading"></span> Syncing...';
+            btn.disabled = true;
+            
+            // Add scanning animation
+            const scanningEffect = document.createElement('div');
+            scanningEffect.style.position = 'fixed';
+            scanningEffect.style.top = '0';
+            scanningEffect.style.left = '0';
+            scanningEffect.style.width = '100%';
+            scanningEffect.style.height = '100%';
+            scanningEffect.style.background = 'radial-gradient(circle, transparent 20%, var(--primary) 20%, transparent 21%)';
+            scanningEffect.style.backgroundSize = '20px 20px';
+            scanningEffect.style.opacity = '0.1';
+            scanningEffect.style.pointerEvents = 'none';
+            scanningEffect.style.zIndex = '1000';
+            scanningEffect.style.animation = 'scan 3s linear';
+            document.body.appendChild(scanningEffect);
+            
+            fetch('/simulate_scan')
+                .then(response => response.json())
+                .then(data => {
+                    stockData = data;
+                    updateDashboard();
+                    showAlert('Blockchain nodes synchronized!', 'success');
+                    addLog('Blockchain scan completed', 'info');
+                })
+                .catch(error => {
+                    showAlert('Scan failed: Network error', 'error');
+                    addLog('Scan error: ' + error, 'error');
+                })
+                .finally(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    setTimeout(() => {
+                        document.body.removeChild(scanningEffect);
+                    }, 3000);
+                });
+        }
+        
+        // Send test email
+        function sendTestEmail() {
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loading"></span> Testing...';
+            btn.disabled = true;
+            
+            fetch('/send_test_email')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showAlert('Smart contract test successful!', 'success');
+                        addLog('Contract test passed', 'info');
+                    } else {
+                        showAlert('Test failed: ' + data.error, 'error');
+                        addLog('Contract test failed: ' + data.error, 'error');
+                    }
+                })
+                .catch(error => {
+                    showAlert('Network error', 'error');
+                    addLog('Network error: ' + error, 'error');
+                })
+                .finally(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
+        }
+        
+        // Fetch and display logs
+        function fetchLogs() {
+            fetch('/get_logs')
+                .then(response => response.json())
+                .then(logs => {
+                    const logsList = document.getElementById('logsList');
+                    logsList.innerHTML = '';
+                    
+                    logs.forEach(log => {
+                        const logEntry = document.createElement('div');
+                        logEntry.className = 'log-entry';
+                        logEntry.innerHTML = `
+                            <span class="log-time">${log.time.split(' ')[1]}</span>
+                            <span class="log-message">${log.message}</span>
+                        `;
+                        logsList.appendChild(logEntry);
+                    });
+                })
+                .catch(error => {
+                    showAlert('Error fetching logs', 'error');
+                    addLog('Error fetching logs: ' + error, 'error');
+                });
+        }
+        
+        // Add log to UI
+        function addLog(message, level) {
+            const logsList = document.getElementById('logsList');
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log-entry';
+            
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            
+            logEntry.innerHTML = `
+                <span class="log-time">${timeString}</span>
+                <span class="log-message">${message}</span>
+            `;
+            
+            logsList.insertBefore(logEntry, logsList.firstChild);
+            
+            // Keep only the last 50 logs
+            if (logsList.children.length > 50) {
+                logsList.removeChild(logsList.lastChild);
+            }
+            
+            // Add visual effect for important logs
+            if (level === 'error') {
+                logEntry.style.borderLeft = '3px solid var(--danger)';
+                logEntry.style.background = 'rgba(255, 61, 0, 0.05)';
+            } else if (level === 'info') {
+                logEntry.style.borderLeft = '3px solid var(--secondary)';
+            }
+        }
+    </script>
+</body>
+</html>

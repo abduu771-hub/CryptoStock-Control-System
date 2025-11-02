@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Materials (Hedera)</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2962FF;
+            --primary-light: #448AFF;
+            --primary-dark: #0039CB;
+            --secondary: #00B0FF;
+            --danger: #FF3D00;
+            --warning: #FFAB00;
+            --success: #00C853;
+            --dark: #0A192F;
+            --darker: #020C1B;
+            --light: #E2F3FF;
+            --gray: #607D8B;
+            --blockchain-blue: #1A4B8C;
+            --blockchain-glow: rgba(41, 98, 255, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        h1 {
+            color: var(--light);
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--blockchain-glow);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '⛓';
+            position: absolute;
+            right: -30px;
+            top: -5px;
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        
+        .subtitle {
+            color: var(--gray);
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, var(--darker), var(--dark));
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            border: 1px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
+            z-index: -1;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+            animation: animate 2s linear infinite;
+        }
+        
+        @keyframes animate {
+            0% { filter: blur(0px); }
+            100% { filter: blur(5px); }
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .card p {
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+        
+        .card p strong {
+            color: var(--secondary);
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background: var(--primary-dark);
+            color: var(--light);
+            border: 1px solid var(--primary-light);
+            box-shadow: 0 0 10px var(--blockchain-glow);
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            box-shadow: 0 0 20px var(--blockchain-glow);
+        }
+        
+        .btn:disabled {
+            background: var(--darker);
+            color: var(--gray);
+            border-color: var(--gray);
+            cursor: not-allowed;
+        }
+        
+        .btn:disabled::before {
+            display: none;
+        }
+        
+        .debug-panel {
+            background: linear-gradient(145deg, var(--darker), var(--dark));
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--primary);
+            margin-top: 40px;
+        }
+        
+        .debug-panel h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        
+        .debug-panel h3::before {
+            content: '🛠';
+            font-size: 1.1rem;
+        }
+        
+        .debug-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .debug-btn {
+            background: var(--darker);
+            border-color: var(--secondary);
+        }
+        
+        .alert-banner {
+            background-color: var(--warning);
+            color: var(--dark);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            animation: slideIn 0.5s forwards;
+            transform: translateX(-100%);
+            opacity: 0;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes slideIn {
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .alert-banner.error {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .alert-banner.success {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .alert-banner.info {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: transform 0.2s;
+        }
+        
+        .close-btn:hover {
+            transform: rotate(90deg);
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Blockchain node animation */
+        .blockchain-node {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.5;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100px, 50px); }
+            50% { transform: translate(50px, 100px); }
+            75% { transform: translate(-50px, 50px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h1::after {
+                right: -25px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Blockchain nodes background -->
+    <div class="blockchain-node" style="top: 20%; left: 10%;"></div>
+    <div class="blockchain-node" style="top: 70%; left: 80%; animation-delay: 2s;"></div>
+    <div class="blockchain-node" style="top: 40%; left: 60%; animation-delay: 4s;"></div>
+    <div class="blockchain-node" style="top: 80%; left: 20%; animation-delay: 6s;"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Hedera Material Marketplace</h1>
+            <p class="subtitle">Decentralized • Secure • Real-time Transactions</p>
+        </header>
+        
+        <div id="alertBanner" class="alert-banner" style="display: none;">
+            <span id="alertMessage"></span>
+            <button class="close-btn" onclick="closeAlert()">×</button>
+        </div>
+        
+        <div class="grid" id="materials">
+            <!-- Materials will be loaded here -->
+        </div>
+        
+        <div class="debug-panel">
+            <h3>Blockchain Debug Tools</h3>
+            <div class="debug-buttons">
+                <button id="debugProduct1" class="btn debug-btn">
+                    <span class="btn-icon">🔍</span>
+                    Check Product 1
+                </button>
+                <button id="debugBalance" class="btn debug-btn">
+                    <span class="btn-icon">💰</span>
+                    Check My Balance
+                </button>
+                <button id="refreshProducts" class="btn debug-btn">
+                    <span class="btn-icon">🔄</span>
+                    Refresh Products
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module">
+        import { ethers } from 'https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.min.js';
+        window.ethers = ethers; // 👈 Add this line
+
+
+        const contractAddress = "0x2BC1893457d9Ec5f16925275c83F5E48393Af0d0";
+        const abi = [
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			}
+		],
+		"name": "ProductAdded",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			}
+		],
+		"name": "ProductPurchased",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_price",
+				"type": "uint256"
+			}
+		],
+		"name": "addProduct",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			}
+		],
+		"name": "buyProduct",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productId",
+				"type": "uint256"
+			}
+		],
+		"name": "getProduct",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "productId",
+				"type": "uint256"
+			}
+		],
+		"name": "getQuantityBought",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "nextProductId",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "products",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "exists",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "quantitiesBought",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "productId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "newPrice",
+				"type": "uint256"
+			}
+		],
+		"name": "updatePrice",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "withdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+];
+    
+const container = document.getElementById('materials');
+let contract;
+
+function showAlert(message, type = 'warning') {
+    const banner = document.getElementById('alertBanner');
+    const alertMessage = document.getElementById('alertMessage');
+    console.log(`[Alert] ${type.toUpperCase()}: ${message}`);
+    alertMessage.innerHTML = message;
+    banner.className = `alert-banner ${type}`;
+    banner.style.display = 'flex';
+    setTimeout(() => {
+        banner.style.opacity = '1';
+        banner.style.transform = 'translateX(0)';
+    }, 10);
+    setTimeout(() => {
+        if (banner.style.display === 'flex') {
+            closeAlert();
+        }
+    }, 5000);
+}
+function closeAlert() {
+    const banner = document.getElementById('alertBanner');
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateX(-100%)';
+    setTimeout(() => {
+        banner.style.display = 'none';
+    }, 500);
+}
+function getHashScanUrl(transactionHash) {
+    return `https://hashscan.io/testnet/transaction/${transactionHash}`;
+}
+
+async function loadProducts() {
+    try {
+        console.log("[LoadProducts] Loading products from smart contract.");
+        let total = 0;
+        if (typeof contract.nextProductId === 'function') {
+            total = await contract.nextProductId();
+            total = total.toNumber ? total.toNumber() : total;
+        } else if (typeof contract.productCount === 'function') {
+            total = await contract.productCount();
+            total = total.toNumber ? total.toNumber() : total;
+        } else {
+            console.warn("[LoadProducts] Cannot find a product count.");
+            total = 0;
+        }
+
+        const productPromises = [];
+        for (let i = 0; i < total; i++) {
+            productPromises.push(
+                contract.products(i)
+                    .then(product => ({...product, id: i}))
+                    .catch(() => ({exists: false, id: i}))
+            );
+        }
+        const products = (await Promise.all(productPromises)).filter(p => p.exists);
+
+        container.innerHTML = '';
+        if (products.length === 0) {
+            container.innerHTML ='<div class="card"><p>No products available</p></div>';
+            showAlert('No products available on the blockchain', 'info');
+            return;
+        }
+
+        const userAddress = await contract.signer.getAddress();
+
+        for (const {id, name, price} of products) {
+            const hbarPrice = ethers.utils.formatEther(price);
+            let purchasedQty = 0;
+            try {
+                purchasedQty = await contract.getQuantityBought(userAddress, id);
+                purchasedQty = purchasedQty.toNumber ? purchasedQty.toNumber() : purchasedQty;
+            } catch (e) {
+                purchasedQty = 0;
+            }
+
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const storedTxHash = localStorage.getItem(`txHash-${id}`);
+            card.innerHTML = `
+                <h3>${name} ${purchasedQty > 0 ? '✅ PURCHASED' : ''}</h3>
+                <p><strong>Price (per unit):</strong> ${hbarPrice} HBAR</p>
+                <p><small>Product ID: ${id}</small></p>
+                ${purchasedQty > 0 ? `
+                    ${storedTxHash ? `<a href="${getHashScanUrl(storedTxHash)}" 
+                                      target="_blank" class="view-receipt-btn">
+                                      🔍 View Transaction on HashScan</a>` : '<p><i>No transaction hash found</i></p>'}
+                ` : `
+                    <label for="qty-${id}">Quantity:</label>
+                    <input type="number" id="qty-${id}" min="1" value="1" style="width:60px; margin-right:10px;">
+                    <button data-id="${id}" data-price="${price.toString()}">
+                        <span class="btn-icon">⛓</span> Purchase with HBAR
+                    </button>
+                `}
+            `;
+
+            container.appendChild(card);
+        }
+
+        showAlert(`Loaded ${products.length} products successfully`, 'success');
+    } catch (err) {
+        console.error("[LoadProducts] Failed to load products.", err);
+        container.innerHTML = `<div class="card"><h3>Loading Error</h3><p>${err.message}</p><button onclick="window.location.reload()">Retry</button></div>`;
+        showAlert(`Failed to load products: ${err.message}`, 'error');
+    }
+}
+
+async function init() {
+    if (!window.ethereum) {
+        container.innerHTML = `<div class="card"><p>Please install MetaMask or a Hedera-compatible wallet to use this dApp.</p></div>`;
+        showAlert('Blockchain wallet not detected', 'error');
+        return;
+    }
+    try {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const { chainId } = await provider.getNetwork();
+        if (chainId !== 296) {
+            showAlert("Please connect to the correct Hedera-compatible network.", 'error');
+            return;
+        }
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        contract = new ethers.Contract(contractAddress, abi, signer);
+        await loadProducts();
+
+        container.addEventListener('click', async (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                const productId = e.target.dataset.id;
+                const price = ethers.BigNumber.from(e.target.dataset.price);
+                const qtyInput = document.getElementById(`qty-${productId}`);
+                let quantity = parseInt(qtyInput.value);
+                if (isNaN(quantity) || quantity <= 0) {
+                    showAlert('Please enter a valid quantity greater than 0.', 'warning');
+                    return;
+                }
+
+                e.target.disabled = true;
+                e.target.innerHTML = '<span class="loading"></span> Processing on Blockchain...';
+
+                try {
+                    const totalPrice = price.mul(quantity);
+                    const tx = await contract.buyProduct(productId, quantity, { value: totalPrice });
+                    const receipt = await tx.wait();
+
+                    if (receipt.status === 1) {
+                        const txHash = receipt.transactionHash;
+                        localStorage.setItem(`txHash-${productId}`, txHash);
+                        const hashScanUrl = getHashScanUrl(txHash);
+                        showAlert(
+                            `✅ Purchased successfully! <a href="${hashScanUrl}" target="_blank" style="color: white; text-decoration: underline;">View on HashScan</a>`,
+                            'success'
+                        );
+                    } else {
+                        throw new Error("Transaction failed.");
+                    }
+                } catch (err) {
+                    console.error("[Buy] Failed to buy product.", err);
+                    showAlert(err?.message || "Transaction failed.", 'error');
+                } finally {
+                    e.target.innerHTML = '<span class="btn-icon">⛓</span> Purchase with HBAR';
+                    e.target.disabled = false;
+                    await loadProducts();
+                }
+            }
+        });
+    } catch (err) {
+        console.error("[Init] Failed to connect.", err);
+        container.innerHTML = '<div class="card"><p>Blockchain connection error.</p></div>';
+        showAlert('Blockchain initialization error: ' + err.message, 'error');
+    }
+}
+
+window.addEventListener('load', init);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+{"time": "2025-06-09 20:42:16,843", "level": "INFO", "message": "Logging system started."}
+{"time": "2025-06-09 20:42:29,725", "level": "INFO", "message": "Logging system started."}
+{"time": "2025-06-09 20:50:22,338", "level": "INFO", "message": "Logging system started."}
+{"time": "2025-06-09 20:50:35,140", "level": "INFO", "message": "Logging system started."}
+{"time": "2025-06-10 11:29:09,973", "level": "INFO", "message": "Logging system started."}
+{"time": "2025-06-11 13:51:37,243", "level": "INFO", "message": "Logging system started."}
+{"time": "2025-06-11 13:59:33,820", "level": "INFO", "message": "RFID Stock Alert System started"}
+{"time": "2025-06-11 13:59:35,422", "level": "INFO", "message": "RFID Stock Alert System started"}
+{"time": "2025-06-11 14:00:10,743", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:00:25,839", "level": "ERROR", "message": "Test email failed: [Errno 11001] getaddrinfo failed"}
+{"time": "2025-06-11 14:00:25,839", "level": "ERROR", "message": "Failed to send email for Capacitors: [Errno 11001] getaddrinfo failed"}
+{"time": "2025-06-11 14:00:36,429", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:00:54,876", "level": "ERROR", "message": "Failed to send email for Plastic Casings: [Errno 11001] getaddrinfo failed"}
+{"time": "2025-06-11 14:05:18,471", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:11:28,519", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:11:32,552", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:11:32,996", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:12:22,908", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:12:25,949", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:12:32,206", "level": "INFO", "message": "Test email sent successfully"}
+{"time": "2025-06-11 14:12:39,281", "level": "INFO", "message": "Email alert sent for Ethernet Ports (low stock: 13 units)"}
+{"time": "2025-06-11 14:12:46,500", "level": "INFO", "message": "Email alert sent for Ethernet Ports (low stock: 13 units)"}
+{"time": "2025-06-11 14:12:59,157", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:13:00,959", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:13:02,731", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:13:03,331", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:13:03,557", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:13:03,815", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:13:04,002", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 14:31:08,503", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:10,172", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:11,797", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:14,497", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:16,074", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:17,638", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:19,228", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:20,847", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:22,621", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:24,290", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:26,900", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:29,479", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:31,014", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:32,566", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:34,147", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:35,734", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:37,305", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:38,887", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:40,485", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:42,041", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:43,603", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:45,164", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:46,779", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 14:31:48,671", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 15:09:39,209", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 15:09:42,543", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 15:09:42,971", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 15:10:16,921", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 15:10:19,522", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 15:10:20,369", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-11 15:10:30,602", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-11 15:10:39,550", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 7 units)"}
+{"time": "2025-06-12 12:05:14,242", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:05:14,970", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:09:33,125", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:09:55,189", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:10:14,119", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:14:03,550", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:14:04,009", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:26:34,355", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:27:00,387", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:27:26,340", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:27:40,039", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:28:22,592", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:28:51,375", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:28:52,499", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:29:05,976", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 12:29:08,005", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 12:29:13,322", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 12:29:23,969", "level": "INFO", "message": "Email alert sent for Power Supplies (low stock: 6 units)"}
+{"time": "2025-06-12 12:29:32,983", "level": "INFO", "message": "Email alert sent for Power Supplies (low stock: 6 units)"}
+{"time": "2025-06-12 12:30:29,112", "level": "INFO", "message": "Received price $0.72 for Power (Request ID: None)"}
+{"time": "2025-06-12 12:31:54,548", "level": "INFO", "message": "Email alert sent for Power Supplies (low stock: 16 units)"}
+{"time": "2025-06-12 12:32:29,802", "level": "INFO", "message": "Received price $1 for Power Supplies (Request ID: 1749727912)"}
+{"time": "2025-06-12 13:50:19,808", "level": "INFO", "message": "Test email sent successfully"}
+{"time": "2025-06-12 13:50:29,634", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 13:50:31,070", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 13:50:31,320", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 13:50:31,589", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 13:50:31,802", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 14:04:43,190", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:05:06,059", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:05:35,254", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:10:54,031", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:10:55,229", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:11:09,972", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:11:20,231", "level": "INFO", "message": "Email alert sent for Ethernet Ports (low stock: 15 units)"}
+{"time": "2025-06-12 14:12:06,681", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:13:43,199", "level": "INFO", "message": "Received price 1.0 HBAR for Ethernet Ports (Request ID: 1749733878)"}
+{"time": "2025-06-12 14:21:45,241", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:40:12,281", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:40:12,966", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:55:51,967", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:55:52,469", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:56:20,600", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 14:56:21,089", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:15:29,919", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:15:30,369", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:16:27,794", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:16:28,244", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:17:53,064", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:17:53,529", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:19:53,650", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:19:54,127", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:28:17,913", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:28:18,384", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:28:47,509", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:28:47,959", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:30:06,710", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:30:07,160", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:36:47,428", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:36:47,879", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:37:13,891", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:37:14,357", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:37:48,371", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:37:48,838", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:40:28,240", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:40:28,690", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:43:23,781", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 15:43:24,248", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:06:17,519", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:06:18,725", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:14:57,766", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:14:58,216", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:16:18,501", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:16:19,201", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:18:35,491", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:18:35,941", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:20:55,900", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:20:56,350", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:23:49,889", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:23:50,356", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:27:13,341", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:27:13,908", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:27:46,671", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:27:47,138", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:34:57,051", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:34:57,518", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:36:27,522", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:36:27,973", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:38:39,794", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:38:40,261", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:40:47,098", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:40:47,564", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 17:59:17,365", "level": "INFO", "message": "System started"}
+{"time": "2025-06-12 17:59:19,380", "level": "INFO", "message": "System started"}
+{"time": "2025-06-12 18:02:59,472", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:03:03,174", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:03:05,324", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:03:31,550", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:03:33,132", "level": "INFO", "message": "Email alert sent for Ethernet Ports (low stock: 8 units)"}
+{"time": "2025-06-12 18:04:03,784", "level": "ERROR", "message": "Blockchain error: \nABI Not Found!\nNo element named `addProduct` with 3 argument(s).\nProvided argument types: (str,str,int)\nProvided keyword argument types: {}\n\nTried to find a matching ABI element named `addProduct`, but encountered the following problems:\nSignature: addProduct(string,uint256), type: function\nExpected 2 argument(s) but received 3 argument(s).\n"}
+{"time": "2025-06-12 18:07:14,612", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:07:19,765", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:07:22,081", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:07:33,186", "level": "INFO", "message": "Email alert sent for Ethernet Ports (low stock: 5 units)"}
+{"time": "2025-06-12 18:07:55,630", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:08:55,105", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:08:59,772", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:09:01,941", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:09:15,813", "level": "INFO", "message": "Email alert sent for LED Indicators (low stock: 6 units)"}
+{"time": "2025-06-12 18:09:38,443", "level": "ERROR", "message": "Blockchain error: Address <web3._utils.empty.Empty object at 0x000001F21DE894D0> must be provided as a string"}
+{"time": "2025-06-12 18:11:13,644", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:13:53,763", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:13:59,449", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:14:35,197", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:14:37,575", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:14:43,465", "level": "INFO", "message": "Email alert sent for Capacitors (low stock: 14 units)"}
+{"time": "2025-06-12 18:14:54,669", "level": "ERROR", "message": "Blockchain error: 'SignedTransaction' object has no attribute 'rawTransaction'"}
+{"time": "2025-06-12 18:21:58,748", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:22:00,965", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:22:07,584", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 17 units)"}
+{"time": "2025-06-12 18:22:28,761", "level": "ERROR", "message": "Blockchain error: 'SignedTransaction' object has no attribute 'rawTransaction'"}
+{"time": "2025-06-12 18:24:23,092", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:24:25,126", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:24:38,064", "level": "INFO", "message": "Email alert sent for Power Supplies (low stock: 8 units)"}
+{"time": "2025-06-12 18:24:58,255", "level": "ERROR", "message": "Blockchain error: 'SignedTransaction' object has no attribute 'rawTransaction'"}
+{"time": "2025-06-12 18:26:37,965", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:26:43,043", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:26:45,283", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:27:05,364", "level": "ERROR", "message": "Blockchain error: 400 Client Error: Bad Request for url: https://testnet.hashio.io/api"}
+{"time": "2025-06-12 18:33:20,689", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:38:29,295", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:42:54,823", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:42:57,241", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:43:10,569", "level": "ERROR", "message": "Blockchain error: Traceback (most recent call last):\n  File \"C:\\Users\\ASUS\\Desktop\\Iot\\app.py\", line 294, in add_to_blockchain\n    tx_hash = w3.eth.send_raw_transaction(signed_tx.rawTransaction)\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'SignedTransaction' object has no attribute 'rawTransaction'\n"}
+{"time": "2025-06-12 18:43:59,299", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:44:05,308", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:44:07,920", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:44:13,096", "level": "INFO", "message": "Added to blockchain: Power Supplies (TX: 1cedb021d58884f72c311f79c64688d298581d5d768211d60c95d450d22330c1)"}
+{"time": "2025-06-12 18:49:19,178", "level": "INFO", "message": "Email alert sent for Capacitors (low stock: 14 units)"}
+{"time": "2025-06-12 18:49:31,243", "level": "INFO", "message": "Added to blockchain: Capacitors (TX: 6f2495e5f76fcc6f570afd27e254be2a1db509114d913fe26bee2b57e7718ea0)"}
+{"time": "2025-06-12 18:53:30,354", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 18:53:32,777", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:04:25,390", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:04:27,919", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:07:35,574", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:07:38,233", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:10:58,444", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:11:01,106", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:13:11,932", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:13:14,449", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:46:32,610", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:46:43,077", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:48:19,672", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:48:22,295", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:48:46,033", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:48:48,518", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:49:57,447", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:49:59,981", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:57:28,509", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 19:57:30,958", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:01:15,532", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:01:18,138", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:30:27,781", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:30:30,350", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:32:19,027", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:32:21,509", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:33:28,037", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:33:30,518", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:27,997", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:32,915", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:36,900", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:40,807", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:44,803", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:48,788", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:52,707", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:40:57,009", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:41:00,827", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:41:04,678", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:41:08,537", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:41:12,349", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 20:41:16,066", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:02:28,074", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-12 21:08:07,464", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:08:09,905", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:11:44,757", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:11:47,355", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:14:02,596", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:14:05,063", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:15:32,174", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:15:34,633", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:21:42,580", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:21:45,288", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:24:35,383", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:24:37,982", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:31:17,142", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:31:19,874", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:46:12,661", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:46:15,188", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:47:08,679", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-12 21:47:12,519", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 15 units)"}
+{"time": "2025-06-12 21:47:35,432", "level": "INFO", "message": "Added to blockchain: Microcontrollers (TX: e758c85a204b01110067576d68c98f70a3a3f5bf5993819fa1fa7d189e630390)"}
+{"time": "2025-06-13 11:47:17,606", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 11:47:24,818", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 11:47:41,564", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 11:47:44,261", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 9 units)"}
+{"time": "2025-06-13 11:48:28,473", "level": "INFO", "message": "Added to blockchain: Microcontrollers (TX: a7cc7665a746d1487ba5ca06d585f6b08ec1444119f3c9ad8fdb33650ba050b3)"}
+{"time": "2025-06-13 11:58:13,889", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 11:58:19,505", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 11:58:24,473", "level": "INFO", "message": "Email alert sent for Ethernet Ports (low stock: 9 units)"}
+{"time": "2025-06-13 11:58:47,933", "level": "INFO", "message": "Added to blockchain: Ethernet Ports (TX: c90d843e34295fa5315b5fefc19de7d95d52915219c1e0a7178513e607582982)"}
+{"time": "2025-06-13 12:04:27,740", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 12:04:33,697", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 12:10:52,066", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 12:10:58,108", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:03:43,488", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:03:48,098", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:15:10,094", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:15:15,658", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:17:01,316", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:17:06,019", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:26:12,168", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:26:14,402", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 11 units)"}
+{"time": "2025-06-13 13:26:56,202", "level": "INFO", "message": "Added to blockchain: Microcontrollers (TX: b2343d6d63f837dac9ea4ff252da526a64ed50344daeb60bd66a27fd4cd528ee)"}
+{"time": "2025-06-13 13:30:17,591", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 13:30:21,969", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 14:24:26,117", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-13 14:24:30,864", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:33:55,217", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:03,250", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:11,155", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:18,198", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:25,092", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:33,456", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:41,757", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:48,588", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:34:57,708", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:35:04,854", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:35:11,573", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 16:35:18,502", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:36:06,921", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:36:09,204", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:36:29,415", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:36:33,082", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:36:40,118", "level": "INFO", "message": "Email alert sent for Cooling Fans (low stock: 13 units)"}
+{"time": "2025-06-14 19:37:05,536", "level": "INFO", "message": "Added to blockchain: Cooling Fans (TX: 7c1d82b78d802481bd263dd06af69e7dae8c1fc64db3f398d885ca3f66044941)"}
+{"time": "2025-06-14 19:44:30,332", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:44:32,946", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:46:06,324", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:46:09,018", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:46:30,852", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:46:34,049", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:49:06,358", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:49:08,764", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:55:31,847", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:55:39,733", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:57:11,985", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:57:14,382", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 19:57:33,041", "level": "INFO", "message": "Email alert sent for Ethernet Ports (low stock: 5 units)"}
+{"time": "2025-06-14 19:57:59,902", "level": "INFO", "message": "Added to blockchain: Ethernet Ports (TX: fcf8aff6cdeac689439d913b7ede0a8a61bd5ee6ae8d221718886e3c58cce1db)"}
+{"time": "2025-06-14 20:05:07,651", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 20:05:56,748", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 20:08:25,708", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 20:08:28,566", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 20:08:42,477", "level": "INFO", "message": "Email alert sent for Capacitors (low stock: 8 units)"}
+{"time": "2025-06-14 20:08:55,015", "level": "INFO", "message": "Added to blockchain: Capacitors (TX: 014f2b83643394c1383ab19cea17d5b062a5495fbf43ebfce45855d693e65cd4)"}
+{"time": "2025-06-14 20:12:45,869", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 20:14:03,189", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 20:14:05,928", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-14 20:14:32,500", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 17 units)"}
+{"time": "2025-06-14 20:14:48,573", "level": "INFO", "message": "Added to blockchain: Microcontrollers (TX: 7b6770840fad0a205bb5e3cce0ccd4cb9b3ede6da30f30e12844baf5593f5db9)"}
+{"time": "2025-06-15 15:54:11,985", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 15:54:14,424", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:20:56,179", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:20:59,223", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:21:29,459", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:21:31,793", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:24:12,378", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:24:14,730", "level": "INFO", "message": "Email alert sent for PCB Boards (low stock: 15 units)"}
+{"time": "2025-06-15 16:24:49,421", "level": "INFO", "message": "Added to blockchain: PCB Boards (TX: 3270e65fa4bbeacfaabb9c69998a7e8c140e6e0198b24074c032b18800b154c4)"}
+{"time": "2025-06-15 16:24:50,601", "level": "INFO", "message": "Added to blockchain: PCB Boards (TX: 3270e65fa4bbeacfaabb9c69998a7e8c140e6e0198b24074c032b18800b154c4)"}
+{"time": "2025-06-15 16:30:55,710", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:30:57,885", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:33:43,103", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:33:45,957", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:34:11,530", "level": "INFO", "message": "Added to blockchain: PCB Boards (TX: 51a8f9ee6654d2a77a5de630710e7f790404c28ab4868b9b627232dc168cbf98)"}
+{"time": "2025-06-15 16:38:33,286", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:38:35,612", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-15 16:38:54,692", "level": "INFO", "message": "Email alert sent for Capacitors (low stock: 13 units)"}
+{"time": "2025-06-15 16:39:07,632", "level": "INFO", "message": "Added to blockchain: Capacitors (TX: 10ab6ae4e550ff11062efc407da2865e09ee55620f938ff5dc430fea9a8398d0)"}
+{"time": "2025-06-16 10:01:56,257", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 10:01:59,303", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 10:02:11,779", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 10:02:14,284", "level": "INFO", "message": "Email alert sent for LED Indicators (low stock: 19 units)"}
+{"time": "2025-06-16 10:02:17,734", "level": "INFO", "message": "Email alert sent for LED Indicators (low stock: 19 units)"}
+{"time": "2025-06-16 10:05:05,019", "level": "INFO", "message": "Added to blockchain: LED Indicators (TX: c50907cf7ad0c0c62e93716cc7b7d7f9b15a45c37e29962d41ebb188f04ee962)"}
+{"time": "2025-06-16 23:42:35,270", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:42:42,879", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:42:50,412", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:42:56,881", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:43:03,584", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:43:10,184", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:43:19,069", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:43:26,089", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:43:32,018", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:43:38,814", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-16 23:44:03,333", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-17 11:46:43,819", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-17 11:47:00,698", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-21 14:46:59,013", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-21 14:47:01,591", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-21 15:33:38,044", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-21 15:35:59,210", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-06-21 15:36:01,993", "level": "INFO", "message": "Email alert sent for Capacitors (low stock: 11 units)"}
+{"time": "2025-06-21 15:36:14,576", "level": "INFO", "message": "Email alert sent for Capacitors (low stock: 11 units)"}
+{"time": "2025-06-21 15:38:55,894", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-21 15:38:56,727", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-06-21 15:44:15,835", "level": "INFO", "message": "Added to blockchain: Capacitors (TX: 536cef7529cb80f53e2e78833e372cde2983db2393bd98b2b604e723b4cd2e8c)"}
+{"time": "2025-10-15 09:10:57,941", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 09:11:08,217", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 09:11:47,425", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 09:11:49,664", "level": "INFO", "message": "Email alert sent for Cooling Fans (low stock: 16 units)"}
+{"time": "2025-10-15 09:13:38,889", "level": "INFO", "message": "Added to blockchain: Cooling Fans (TX: 97c0a5f7bd06b0c4aa31c98806366fd269c80933b5b0cea2259227e38fb1c62b)"}
+{"time": "2025-10-15 09:19:42,661", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-10-15 09:19:49,230", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-10-15 09:19:51,249", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-10-15 09:19:52,017", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-10-15 09:19:52,591", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-10-15 09:19:55,665", "level": "INFO", "message": "Simulated RFID scan performed"}
+{"time": "2025-10-15 09:20:03,838", "level": "INFO", "message": "Email alert sent for PCB Boards (low stock: 19 units)"}
+{"time": "2025-10-15 09:47:54,676", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 09:48:02,327", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 10:29:37,247", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 10:29:39,355", "level": "INFO", "message": "Email alert sent for Cooling Fans (low stock: 6 units)"}
+{"time": "2025-10-15 10:38:35,302", "level": "ERROR", "message": "Failed to send email for Microcontrollers: [Errno 11001] getaddrinfo failed"}
+{"time": "2025-10-15 10:38:37,371", "level": "ERROR", "message": "Failed to send email for Microcontrollers: [Errno 11001] getaddrinfo failed"}
+{"time": "2025-10-15 10:38:41,633", "level": "ERROR", "message": "Failed to send email for Microcontrollers: [Errno 11001] getaddrinfo failed"}
+{"time": "2025-10-15 10:38:45,120", "level": "ERROR", "message": "Failed to send email for Microcontrollers: [Errno 11001] getaddrinfo failed"}
+{"time": "2025-10-15 10:47:18,057", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 10:47:24,817", "level": "INFO", "message": "Stock Alert System started"}
+{"time": "2025-10-15 10:48:00,945", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 19 units)"}
+{"time": "2025-10-15 10:50:40,261", "level": "INFO", "message": "Email alert sent for Microcontrollers (low stock: 19 units)"}
+{"time": "2025-10-15 10:51:21,525", "level": "INFO", "message": "Added to blockchain: Microcontrollers (TX: 930de847e4b79cabb89ad7a413daad582c88ce06985a1815e7ed811c18589d5a)"}
+{"time": "2025-10-15 13:43:15,521", "level": "INFO", "message": "Stock Alert System started"}
